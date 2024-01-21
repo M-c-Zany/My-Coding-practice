@@ -1,0 +1,128 @@
+
+1. Retrieve all data from the table:
+   
+   SELECT * FROM ameer;
+   
+   This query will retrieve all rows and columns from the table, displaying the entire dataset.
+
+2. Filter data based on a specific condition:
+   
+   SELECT * FROM ameer WHERE Age > 25;
+   
+   This query retrieves rows where the age is greater than 25. You can modify the condition based on your specific requirements.
+
+3. Order data by a specific column:
+   
+   SELECT * FROM ameer ORDER BY Age DESC;
+   
+   This query retrieves all rows and orders them in descending order based on the 'Age' column.
+
+4. Count the number of rows in the table:
+   
+   SELECT COUNT(*) FROM ameer;
+   
+   This query returns the total number of rows in the table.
+
+5. Group data by a specific column:
+   
+   SELECT Gender, COUNT(*) FROM ameer GROUP BY Gender;
+   
+   This query groups the data by the 'Gender' column and provides a count of rows for each gender.
+
+6. Retrieve data with a specific value in the 'DISC' column:
+   
+   SELECT * FROM ameer WHERE DISC = 'A';
+
+Certainly! Here are a few more examples of `SELECT` queries that you can use to perform various tests on the data:
+
+7. Retrieve unique values from a specific column:
+   
+   SELECT DISTINCT Gender FROM YourTableName;
+   
+   This query returns the distinct values present in the 'Gender' column.
+
+8. Calculate the average age of the individuals in the table:
+   
+   SELECT AVG(Age) FROM YourTableName;
+   
+   This query calculates the average age of all individuals in the table.
+
+9. Retrieve data for individuals whose last name starts with 'S':
+   
+   SELECT * FROM YourTableName WHERE LastName LIKE 'S%';
+   
+   This query retrieves rows where the last name starts with the letter 'S'.
+
+10. Retrieve data for individuals aged 25 or 30:
+
+    SELECT * FROM YourTableName WHERE Age IN (25, 30);
+    
+    This query retrieves rows where the age is either 25 or 30.
+
+11. Count the number of individuals in each age group:
+
+    SELECT 
+        CASE 
+            WHEN Age < 25 THEN 'Under 25'
+            WHEN Age BETWEEN 25 AND 30 THEN '25-30'
+            ELSE 'Over 30'
+        END AS AgeGroup,
+        COUNT(*) AS Count
+    FROM YourTableName
+    GROUP BY AgeGroup;
+    
+    This query categorizes individuals into age groups and provides a count for each group.
+
+12. Retrieve individuals in descending order of age and ascending order of last name:
+
+    SELECT * FROM YourTableName ORDER BY Age DESC, LastName ASC;
+    
+Certainly! Here are a few more examples of `SELECT` queries to further test and explore the data:
+
+13. Retrieve individuals with a specific email domain:
+    
+    SELECT * FROM YourTableName WHERE Mail LIKE '%@email.com';
+    
+    This query retrieves rows where the email address ends with "@email.com".
+
+14. Retrieve the oldest and youngest individuals in the table:
+    
+    SELECT * FROM YourTableName WHERE Age = (SELECT MAX(Age) FROM YourTableName) OR Age = (SELECT MIN(Age) FROM YourTableName);
+    
+    This query retrieves the individuals with the maximum and minimum ages in the table.
+
+15. Retrieve the count of individuals for each gender and DISC combination:
+    
+    SELECT Gender, DISC, COUNT(*) FROM YourTableName GROUP BY Gender, DISC;
+    
+    This query provides a count of individuals for each combination of gender and DISC type.
+
+16. Retrieve individuals whose first name contains the letter 'a':
+    
+    SELECT * FROM YourTableName WHERE LOWER(FirstName) LIKE '%a%';
+    
+    This query retrieves rows where the first name contains the letter 'a', case-insensitive.
+
+17. Calculate the total number of males and females in the table:
+    
+    SELECT Gender, COUNT(*) FROM YourTableName GROUP BY Gender;
+    
+    This query provides a count of males and females in the table.
+
+18. Retrieve individuals with an 'A' or 'B' DISC type and aged 28 or younger:
+    
+    SELECT * FROM YourTableName WHERE (DISC = 'A' OR DISC = 'B') AND Age <= 28;
+    
+    This query retrieves rows where the DISC type is 'A' or 'B' and the age is 28 or younger.
+
+19. Calculate the average age for each DISC type:
+    
+    SELECT DISC, AVG(Age) FROM YourTableName GROUP BY DISC;
+    
+    This query provides the average age for each DISC type in the table.
+
+20. Retrieve individuals with the same first name but different last names:
+    
+    SELECT FirstName, COUNT(DISTINCT LastName) AS UniqueLastNames FROM YourTableName GROUP BY FirstName HAVING COUNT(DISTINCT LastName) > 1;
+    
+    This query identifies individuals with the same first name but different last names.

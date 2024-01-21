@@ -1,0 +1,77 @@
+/* Define the style for the body */
+body{
+    background-color: aquamarine;
+}
+
+/* Define the style for the nav bar */
+nav{
+    background-color:bisque;
+    /* Use flexbox to align the items */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Add some margin and padding */
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Define the style for the nav links */
+nav a{
+    color:darkorchid;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 10px;
+    padding-top: 10px;
+    /* Add a transition effect */
+    transition: all 0.3s ease;
+}
+
+/* Define the style for the hover effect */
+nav a:hover{
+    color: blue;
+    /* Add a scale effect */
+    transform: scale(1.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly; /* Distribute space between columns */
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.column {
+  flex: 0 0 30%; /* Each column takes 30% of the container width */
+  background-color: bisque;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in element's total width */
+  border: 1px;
+}
+
+h2{
+  color: darkorchid;
+  font-weight: 700px;
+}
+
+/* Styling for the CTA button */
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #FF6347; /* Change the background color */
+  color: white; /* Text color */
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Change button color on hover */
+.cta-button:hover {
+  background-color: #FF4500; /* Change to a different color on hover */
+}

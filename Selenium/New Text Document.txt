@@ -1,0 +1,19 @@
+1. Selenium is an open-source automation testing tool.
+2. It is exclusively for web-based applications.
+3. Selenium supports multiple browsers-
+Chrome, Firefox, Internet Explorer, Safari, etc 
+4. Selenium works with multiple platforms-
+Windows, Apple OSX, Linux
+5. Selenium can be coded in multiple languages-
+Java, C#, Python, Javascript, PHP, Ruby ETC
+6. Difference between selenium and web driver
+
+
+
+
+Simplified Selenium WebDriver architecture:
+1. After triggering the test, the complete Selenium code (Client), which we have written, will be converted to JSON format.
+2. The generated JSON is sent to the Browser driver (Server) through the HTTP protocol. 
+   Note: Each browser communicates with its respective browser driver and executes the commands.
+3. Browser drivers communicate with their respective browsers and execute the commands by interpreting the received JSON on the browser.
+4. The Browser Driver receives responses back from the browser and sends JSON responses back to the client.
